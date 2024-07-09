@@ -1,0 +1,108 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "1af7ecba-24ef-42ac-9617-afceb0f0c8bd": {
+          "type": "backbtn",
+          "settings": {
+          }
+        },
+        "bfaf958c-62bd-4aaf-b949-370e76eea1a4": {
+          "type": "wishlist",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "8a43d1c1-21f1-4131-9b59-3b18608cbc58": {
+          "type": "pro_count",
+          "settings": {
+          }
+        },
+        "b4bd758e-4fa3-4a60-86a8-7a845bc391c3": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "a75b0504-9d48-4bf8-a0fd-b3bd289a008d": {
+          "type": "pro_detail",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "17d0a521-0a0f-44a9-906e-8643c0a0cd76": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        }
+      },
+      "block_order": [
+        "1af7ecba-24ef-42ac-9617-afceb0f0c8bd",
+        "bfaf958c-62bd-4aaf-b949-370e76eea1a4",
+        "title",
+        "description",
+        "8a43d1c1-21f1-4131-9b59-3b18608cbc58",
+        "b4bd758e-4fa3-4a60-86a8-7a845bc391c3",
+        "quantity_selector",
+        "a75b0504-9d48-4bf8-a0fd-b3bd289a008d",
+        "buy_buttons",
+        "17d0a521-0a0f-44a9-906e-8643c0a0cd76"
+      ],
+      "settings": {
+        "pro_img_widthheight": "440x466",
+        "pro_thumb_img_widthheight": "126x126",
+        "title": "Description",
+        "image": "shopify:\/\/shop_images\/ring-slider2.png",
+        "sizechart_enable": true,
+        "size_lable": "Sizing Guide",
+        "sizechart_info": "<thead>\n                            <tr>\n                                <th scope=\"col\">Mens<\/th>\n                                <th scope=\"col\">Small<\/th>\n                                <th scope=\"col\">Medium<\/th>\n                                <th scope=\"col\">Large<\/th>\n                                <th scope=\"col\">X-Large<\/th> \n                                <th scope=\"col\">XX-Large<\/th>\n                            <\/tr>\n                        <\/thead>\n                        <tbody>\n                            <tr>\n                                <td data-label=\"Mens\">Neck<\/td>\n                                <td data-label=\"Small\">14-14.5<\/td>\n                                <td data-label=\"Medium\">15-15.5<\/td>\n                                <td data-label=\"Large\">16-16.5<\/td>\n                                <td data-label=\"X-Large\">17-17.5<\/td>\n                                <td data-label=\"XX-Large\">18-18.5<\/td>\n                            <\/tr>\n                            <tr>\n                                <td data-label=\"Mens\" class=\"bg-gray\">Chest<\/td>\n                                <td data-label=\"Small\" class=\"bg-gray\">14-14.5<\/td>\n                                <td data-label=\"Medium\" class=\"bg-gray\">15-15.5<\/td>\n                                <td data-label=\"Large\" class=\"bg-gray\">16-16.5<\/td>\n                                <td data-label=\"X-Large\" class=\"bg-gray\">17-17.5<\/td>\n                                <td data-label=\"XX-Large\" class=\"bg-gray\">18-18.5<\/td>\n                            <\/tr>\n                            <tr>\n                                <td data-label=\"Mens\">Sleeve<\/td>\n                                <td data-label=\"Small\">14-14.5<\/td>\n                                <td data-label=\"Medium\">15-15.5<\/td>\n                                <td data-label=\"Large\">16-16.5<\/td>\n                                <td data-label=\"X-Large\">17-17.5<\/td>\n                                <td data-label=\"XX-Large\">18-18.5<\/td>\n                            <\/tr>\n                            <tr>\n                                <td data-label=\"Mens\" class=\"bg-gray\">Waist<\/td>\n                                <td data-label=\"Small\" class=\"bg-gray\">14-14.5<\/td>\n                                <td data-label=\"Medium\" class=\"bg-gray\">15-15.5<\/td>\n                                <td data-label=\"Large\" class=\"bg-gray\">16-16.5<\/td>\n                                <td data-label=\"X-Large\" class=\"bg-gray\">17-17.5<\/td>\n                                <td data-label=\"XX-Large\" class=\"bg-gray\">18-18.5<\/td>\n                            <\/tr>\n                            <tr>\n                                <td data-label=\"Mens\">Neck<\/td>\n                                <td data-label=\"Small\">14-14.5<\/td>\n                                <td data-label=\"Medium\">15-15.5<\/td>\n                                <td data-label=\"Large\">16-16.5<\/td>\n                                <td data-label=\"X-Large\">17-17.5<\/td>\n                                <td data-label=\"XX-Large\">18-18.5<\/td>\n                            <\/tr>\n                        <\/tbody>",
+        "notify_text": ""
+      }
+    },
+    "17066047757ce8a9ae": {
+      "type": "apps",
+      "settings": {
+      }
+    },
+    "f564be6f-f203-4f47-940d-a431b4188288": {
+      "type": "inner-page-slider",
+      "settings": {
+        "heading": "Our Featured Product",
+        "btn": "",
+        "btn_link": "",
+        "collection": "pendants",
+        "show_vendor": true,
+        "display_product_type": true,
+        "show_rating": false,
+        "show_secondary_image": true,
+        "show_variants": true,
+        "pro_img_widthheight": "600x600"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17066047757ce8a9ae",
+    "f564be6f-f203-4f47-940d-a431b4188288"
+  ]
+}

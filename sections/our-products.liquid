@@ -1,0 +1,89 @@
+<div class="container" data-section="our-products">
+  <div class="our-pro-shop-main">
+    <div class="section-title">
+      {% if section.settings.heading != blank %}<h2>{{ section.settings.heading }}</h2>{% endif %}
+      {% if section.settings.content != blank %}<p>{{ section.settings.content }}</p>{% endif %}
+      {% if section.settings.btn != blank %}
+        <a href="{{ section.settings.btn_link }}" class="home-btn btn">{{ section.settings.btn }} {% render "category-circal" %}</a>
+      {% endif %}
+    </div>
+    <div class="img-wrapper">
+      {% if section.settings.image != blank %}<img src="{{section.settings.image | img_url : 'master' }}">{% endif %}
+        <div class="ring-label">
+        <span>{{ section.settings.title }}</span>
+        <div>{{ section.settings.name }}</div>
+        <ins>{{ section.settings.price }}</ins>
+        <a href="{{ section.settings.btn_link1 }}">{{ section.settings.btn1 }}</a>
+      </div>
+    </div>
+  </div>                   
+</div>
+
+{% schema %}
+  {
+  "name": "our-products",
+  "tag": "section",
+  "class": "our-pro-shop-sec padding-bottom",
+  "settings":[
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "t:settings_schema.Our-partners.settings.heading"
+      },
+      {
+        "type": "text",
+        "id": "content",
+        "label": "t:settings_schema.Our-partners.settings.content"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "t:settings_schema.Our-partners.settings.btn"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "t:settings_schema.Our-partners.settings.btn_link"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:settings_schema.Our-partners.settings.image"
+      },
+      {
+        "type": "header",
+        "content": "Product Image Button1"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "t:settings_schema.Our-partners.settings.title"
+      },
+      {
+        "type": "text",
+        "id": "name",
+        "label": "t:settings_schema.Our-partners.settings.name"
+      },
+      {
+        "type": "text",
+        "id": "price",
+        "label": "t:settings_schema.Our-partners.settings.price"
+      },
+     {
+        "type": "text",
+        "id": "btn1",
+        "label": "t:settings_schema.Our-partners.settings.btn"
+     },
+     {
+        "type": "url",
+        "id": "btn_link1",
+        "label": "t:settings_schema.Our-partners.settings.btn_link"
+      }
+  ],
+  "presets": [
+    {
+      "name": "Our products"
+    }
+  ]
+}
+{% endschema %}

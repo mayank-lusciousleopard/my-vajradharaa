@@ -1,0 +1,55 @@
+            <div class="container" data-section="home-services">
+                <div class="service-tag">
+                    {% if section.blocks.size > 0 %}
+                    {% for block in section.blocks %}
+                    <div class="d-flex align-items-center">
+                      {% if block.settings.image != blank %}<img src="{{ block.settings.image | img_url : 'master' }}">{% endif %}
+                        <div class="service-text"> 
+                           {% if block.settings.title != blank %} <b>{{ block.settings.title }}</b>{% endif %}
+                           {% if block.settings.description != blank %} <span>{{ block.settings.description }}</span>{% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    {% if section.blocks.size == 0 %}
+                        {% include 'no-blocks' %}
+                    {% endif %}
+                </div>
+            </div>
+
+{% schema %}
+  {
+  "name": "home-services",
+  "tag": "section",
+  "class": "service-tag-div padding-bottom",
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "Services",
+      "name": "home-services",
+      "settings":[
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:settings_schema.Our-partners.blocks.image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "t:settings_schema.Our-partners.blocks.title"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "t:settings_schema.Our-partners.blocks.description"
+          }
+       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "home-services"
+    }
+  ]
+}
+{% endschema %}

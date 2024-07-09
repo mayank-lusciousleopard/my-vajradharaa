@@ -1,0 +1,258 @@
+{
+  "current": {
+    "image2": "shopify:\/\/shop_images\/Frame_1171278553_1.png",
+    "image": "shopify:\/\/shop_images\/Frame_1171278554_1.png",
+    "display_preloader": true,
+    "pre_loader_img": "shopify:\/\/shop_images\/157.gif",
+    "primary_color": "#173334",
+    "secondary_color": "#f2dfce",
+    "primary_font": "#ffffff",
+    "secondary_font": "#000000",
+    "border_color": "#dddddd",
+    "mailchimp_form_action": "https:\/\/us18.list-manage.com\/contact-form?u=28c97e9fc6b2e6214af7bd19c&form_id=1f1f3185abc040a9c4e1626b43a72353",
+    "popup_newsletter_show": false,
+    "newsletter_title": "Sign up our newsletter",
+    "popup_newsletter_description": "Subscribe our newsletters now and stay up-to-date with new collections",
+    "cookie_style": "bottom_to_right",
+    "type_header_font": "Google+Playfair+Display",
+    "body_font": "Outfit",
+    "social_twitter_link": "#",
+    "social_facebook_link": "#",
+    "social_pinterest_link": "",
+    "social_instagram_link": "#",
+    "social_youtube_link": "#",
+    "favicon": "shopify:\/\/shop_images\/diamond_41b285f8-8369-47fd-a9df-f7a14beed316.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Kiddos..png",
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "beb849d2-5573-4601-82f8-dfb6bad54169": {
+            "type": "link-4linklists",
+            "settings": {
+              "title": "All products",
+              "link": "shopify:\/\/collections\/all",
+              "badge_text": "",
+              "bg_color": "#ff0000",
+              "diffclassname": "",
+              "links_1": "main-menu",
+              "links_2": "necklace",
+              "links_3": "",
+              "image": "shopify:\/\/shop_images\/menu-product.png",
+              "imageblink": ""
+            }
+          },
+          "885ed86e-9db8-4318-b965-6d5d28519b37": {
+            "type": "link-simple",
+            "settings": {
+              "title": "Blog",
+              "link": "shopify:\/\/blogs\/news",
+              "badge_text": "",
+              "bg_color": "",
+              "diffclassname": ""
+            }
+          },
+          "8609f05f-66ba-4d78-bdca-ccc720e4c45a": {
+            "type": "link-linklist",
+            "settings": {
+              "title": "Pages",
+              "link": "#",
+              "badge_text": "",
+              "bg_color": "",
+              "diffclassname": "",
+              "links": "pages"
+            }
+          },
+          "link_simple_jEXJne": {
+            "type": "link-simple",
+            "settings": {
+              "title": "Bracelets",
+              "link": "shopify:\/\/collections\/bracelets",
+              "badge_text": "",
+              "bg_color": "",
+              "diffclassname": ""
+            }
+          },
+          "link_simple_J8gbfF": {
+            "type": "link-simple",
+            "settings": {
+              "title": "Pendants",
+              "link": "shopify:\/\/collections\/pendants",
+              "badge_text": "",
+              "bg_color": "",
+              "diffclassname": ""
+            }
+          },
+          "dd6888f1-7917-44d5-931f-9a1506ef4cea": {
+            "type": "link-linklist",
+            "disabled": true,
+            "settings": {
+              "title": "Earings",
+              "link": "shopify:\/\/collections\/earrings",
+              "badge_text": "",
+              "bg_color": "",
+              "diffclassname": "",
+              "links": ""
+            }
+          },
+          "164304e9-b8b7-4ea6-8b64-ddca2ef9d6dd": {
+            "type": "mob-link-4link",
+            "settings": {
+              "title": "Shop All",
+              "link": "shopify:\/\/collections",
+              "badge_text": "",
+              "bg_color": "#ff0000",
+              "diffclassname": "",
+              "links_1": "",
+              "links_2": "",
+              "links_3": "main-menu",
+              "imageblink": ""
+            }
+          },
+          "71459a2f-bba2-4d59-bdd5-2e51b42921d8": {
+            "type": "mob-link-linklist",
+            "settings": {
+              "title": "Blog",
+              "badge_text": "",
+              "bg_color": "",
+              "diffclassname": "",
+              "links": "footer"
+            }
+          },
+          "e52affbe-1ccc-43dc-90bf-0ae747fd1c0d": {
+            "type": "mob-link-simple",
+            "disabled": true,
+            "settings": {
+              "title": "About us",
+              "link": "shopify:\/\/pages\/about-us",
+              "badge_text": "",
+              "bg_color": "",
+              "diffclassname": ""
+            }
+          },
+          "d735ea99-ee0d-4027-8416-9904ac959dfd": {
+            "type": "mob-link-simple",
+            "disabled": true,
+            "settings": {
+              "title": "FAQS",
+              "link": "shopify:\/\/pages\/faqs",
+              "badge_text": "",
+              "bg_color": "",
+              "diffclassname": ""
+            }
+          },
+          "aeb4ebab-638a-485d-853d-5c30fb8e91f2": {
+            "type": "mob-link-simple",
+            "settings": {
+              "title": "Contact us",
+              "link": "shopify:\/\/pages\/contact",
+              "badge_text": "",
+              "bg_color": "",
+              "diffclassname": ""
+            }
+          }
+        },
+        "block_order": [
+          "beb849d2-5573-4601-82f8-dfb6bad54169",
+          "885ed86e-9db8-4318-b965-6d5d28519b37",
+          "8609f05f-66ba-4d78-bdca-ccc720e4c45a",
+          "link_simple_jEXJne",
+          "link_simple_J8gbfF",
+          "dd6888f1-7917-44d5-931f-9a1506ef4cea",
+          "164304e9-b8b7-4ea6-8b64-ddca2ef9d6dd",
+          "71459a2f-bba2-4d59-bdd5-2e51b42921d8",
+          "e52affbe-1ccc-43dc-90bf-0ae747fd1c0d",
+          "d735ea99-ee0d-4027-8416-9904ac959dfd",
+          "aeb4ebab-638a-485d-853d-5c30fb8e91f2"
+        ],
+        "settings": {
+          "content": "<b>Monday - Friday:  <\/b> 8:00 AM - 9:00 PM",
+          "content1": "",
+          "url1": "",
+          "content2": "",
+          "url2": "",
+          "logo": "shopify:\/\/shop_images\/VAJRA_3rd_g_transparent.png"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "607b8c01-ebaf-4097-9776-b08a88e9ae73": {
+            "type": "text",
+            "settings": {
+              "title": "SHOP:",
+              "menu": "footer"
+            }
+          },
+          "4101b21c-d612-4adb-9f23-511e5c377503": {
+            "type": "text",
+            "settings": {
+              "title": "About us:",
+              "menu": "second-footer-menu"
+            }
+          }
+        },
+        "block_order": [
+          "607b8c01-ebaf-4097-9776-b08a88e9ae73",
+          "4101b21c-d612-4adb-9f23-511e5c377503"
+        ],
+        "settings": {
+          "heading": "Subscribe newsletter and get -20% off",
+          "content": "The best style for your subscribe to newsletter form will depend on your brand and audience. If you're not sure which style to choose, it's always a good idea to get feedback from others.",
+          "title": "SHARE :",
+          "btn1": "Privacy Policy",
+          "btn_url1": "shopify:\/\/policies\/privacy-policy",
+          "btn2": "Terms & Conditions",
+          "btn_url2": "shopify:\/\/policies\/terms-of-service"
+        }
+      },
+      "recommendations-product": {
+        "type": "recommendations-product",
+        "blocks": {
+          "290853c0-8566-4463-8a6c-735985048049": {
+            "type": "text_block",
+            "settings": {
+              "add_product": "aashiqana-pendant",
+              "product_location": "Aashiqana Pendant",
+              "product_time": "36 mins Ago"
+            }
+          },
+          "23927796-8290-40cb-8590-5ab1af3df93b": {
+            "type": "text_block",
+            "settings": {
+              "add_product": "hearts-desire-tennis-bracelet",
+              "product_location": "Heart's Desire Tennis Bracelet",
+              "product_time": "50 mins Ago"
+            }
+          },
+          "54b06a2a-8856-41d6-a4c7-013ffb5b1a80": {
+            "type": "text_block",
+            "settings": {
+              "add_product": "love-express-pendent",
+              "product_location": "Love-Express Pendent",
+              "product_time": "20 mins Ago"
+            }
+          }
+        },
+        "block_order": [
+          "290853c0-8566-4463-8a6c-735985048049",
+          "23927796-8290-40cb-8590-5ab1af3df93b",
+          "54b06a2a-8856-41d6-a4c7-013ffb5b1a80"
+        ],
+        "settings": {
+          "show_notification": true,
+          "product_title": "Someone purchased",
+          "delay_time": "3000"
+        }
+      },
+      "quickview": {
+        "type": "quickview",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{%- if article and article != empty -%}
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <a href="{{ article.url }}">
+                  <img src="{{ article.image.src | img_url: 'master'}}" alt="{{ article.image.src.alt | escape }}" loading="lazy" class="default-img">
+                </a>
+            </div>
+            <div class="blog-card-content">        
+              <div class="blog-card-top">
+                <span>{{ article.tags }}</span>
+                <h4><a href="{{ article.url }}">{{ article.title | truncate: 50 | escape }}</a></h4>
+                {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                    <p>
+                    {%- if article.excerpt.size > 0 -%}
+                        {{ article.excerpt | strip_html  }}
+                    {%- else -%}
+                        {{ article.content | strip_html }}
+                    {%- endif -%}
+                    </p>
+                {%- endif -%}
+              </div>
+              <div class="blog-card-bottom">
+                 <a href="{{ article.url }}" class=" btn"> Read More</a>
+                {%- if show_date -%}<span class="date">{{ article.published_at | time_tag: format: 'date' }}</span>{%- endif -%}
+              </div>
+            </div>
+        </div>
+{%- endif -%}

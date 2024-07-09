@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 8,
+        "display_product_type": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_variants": true,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false,
+        "enable_listdesc": true,
+        "pro_img_widthheight": "199x181"
+      }
+    },
+    "91c55920-0c30-45ca-9e44-a98e574fac1f": {
+      "type": "inner-page-slider",
+      "settings": {
+        "heading": "Jewellery  & diamonds",
+        "btn": "Check more products",
+        "btn_link": "shopify:\/\/collections\/all",
+        "collection": "bracelets",
+        "show_vendor": true,
+        "display_product_type": true,
+        "show_rating": false,
+        "show_secondary_image": true,
+        "show_variants": true,
+        "pro_img_widthheight": "600x600"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "91c55920-0c30-45ca-9e44-a98e574fac1f"
+  ]
+}

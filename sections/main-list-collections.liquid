@@ -1,0 +1,66 @@
+<div class="collection-list padding-top">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="text-center">{{ page_title }}</h2>
+    </div>  
+          {%- liquid
+          case section.settings.sort
+          when 'products_high' or 'products_low'
+          assign collections = collections | sort: 'all_products_count'
+          when 'date' or 'date_reversed'
+          assign collections = collections | sort: 'published_at'
+          endcase
+          if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+          assign collections = collections | reverse
+          endif
+          -%}
+      <div class="row" role="list">
+          {%- for collection in collections -%}
+              <div class="col-md-3 col-sm-4 col-12">
+                  {% render 'card-collection', collection: collection %}
+              </div>
+          {%- endfor -%}
+      </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-list-collections.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "sort",
+      "options": [
+        {
+          "value": "alphabetical",
+          "label": "t:sections.main-list-collections.options__1"
+        },
+        {
+          "value": "alphabetical_reversed",
+          "label": "t:sections.main-list-collections.options__2"
+        },
+        {
+          "value": "date_reversed",
+          "label": "t:sections.main-list-collections.options__3"
+        },
+        {
+          "value": "date",
+          "label": "t:sections.main-list-collections.options__4"
+        },
+        {
+          "value": "products_high",
+          "label": "t:sections.main-list-collections.options__5"
+        },
+        {
+          "value": "products_low",
+          "label": "t:sections.main-list-collections.options__6"
+        }
+      ],
+      "default": "alphabetical",
+      "label": "t:sections.main-list-collections.sort"
+    }
+  ]
+}
+{% endschema %}

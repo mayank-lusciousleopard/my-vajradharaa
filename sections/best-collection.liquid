@@ -1,0 +1,101 @@
+<div class="container" data-section="best-collection">
+  <div class="row">
+    <div class="col-lg-6 col-12 img-main-box">
+      <div class="section-title">
+        {% if section.settings.heading != blank %}<h2>{{ section.settings.heading }}</h2>{% endif %}
+        {% if section.settings.content != blank %}<p>{{ section.settings.content }}</p>{% endif %}
+        {% if section.settings.btn != blank %}
+          <a href="{{ section.settings.btn_link }}" class="home-btn btn">{{ section.settings.btn }} {% render "category-circal" %}</a>
+        {% endif %}
+      </div>
+    </div>
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        <div class="col-lg-3 col-md-6 col-12 img-main-box">
+          <div class="img-box">
+            <img src="{{ block.settings.image | img_url: 'master' }}" class="card-img" alt="img2">
+            <div class="inner-text">
+              <div class="top-title">
+                <span>{{ block.settings.title }}</span>
+                <h3>{{ block.settings.heading }}</h3>
+              </div>
+              {% if block.settings.btn1 != blank %}
+                <a href="{{ block.settings.btn_link1 }}" class=" btn">{{ block.settings.btn1 }} {% render "category-circal" %}</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}  
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "best-collection",
+    "tag": "section",
+    "class": "card-sec card-sec1 padding-bottom",
+    "max_blocks":2,
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "t:settings_schema.Our-partners.settings.heading"
+      },
+      {
+        "type": "text",
+        "id": "content",
+        "label": "t:settings_schema.Our-partners.settings.content"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "t:settings_schema.Our-partners.settings.btn"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "t:settings_schema.Our-partners.settings.btn_link"
+      }
+    ],
+    "blocks": [
+    {
+      "type": "text",
+      "name": "Best-Collection",
+      "settings":[
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:settings_schema.Our-partners.blocks.image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "t:settings_schema.Our-partners.blocks.title"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "t:settings_schema.Our-partners.blocks.heading"
+          },
+          {
+            "type": "text",
+            "id": "btn1",
+            "label": "t:settings_schema.Our-partners.blocks.btn"
+          },
+          {
+            "type": "url",
+            "id": "btn_link1",
+            "label": "t:settings_schema.Our-partners.blocks.btn_link"
+          }
+       ]
+    }
+  ],
+    "presets": [
+      {
+        "name": "best-collection"
+      }
+    ]
+  }
+  {% endschema %}

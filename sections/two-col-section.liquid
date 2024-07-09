@@ -1,0 +1,166 @@
+            {% if section.settings.effect1 != blank %}<img src="{{ section.settings.effect1 | img_url: 'master' }}" class="half-ring-design2" alt="top-main-desing">{% endif %}
+            {% if section.settings.image != blank %}<img src="{{ section.settings.image | img_url: 'master' }}" class="desing-circle3" alt="desing-circle3">{% endif %}
+            {% if section.settings.effect2 != blank %}<img src="{{ section.settings.effect2 | img_url: 'master' }}" class="desing-circle4" alt="desing-circle4">{% endif %}
+            <div class="container" data-section="two-col-section">
+                <div class="card-slider-title sec-head d-flex justify-content-between align-items-end">
+                    {% if section.settings.heading != blank %}<h2>{{ section.settings.heading }}</h2>{% endif %}
+                    {% if section.settings.btn != blank %}
+                      <a href="{{ section.settings.btn_link }}" class="btn">{{ section.settings.btn }} {% render "category-circal" %}</a>
+                    {% endif %}
+                </div>
+                <div class="grid__item card-slider-main padding-bottom">
+                  {%- assign collection = collections[section.settings.collection]  -%}
+                    {% for product in collection.products %}
+                       <div class="card-slides">
+                         {% render 'card-product', card_product: product, block_id: block.id, pro_img_widthheight: section.settings.pro_img_widthheight, show_secondary_image: section.settings.show_secondary_image,
+                         show_vendor: section.settings.show_vendor, show_rating: section.settings.show_rating, show_variants: section.settings.show_variants, display_product_type: section.settings.display_product_type  %}
+                          </div>
+                    {% else %}
+                      {%- for i in (1..6) -%}
+                        <div class="card-slides">
+                           <h3>Please Select The Collection</h3>
+                        </div>
+                      {%- endfor -%}
+                    {% endfor %} 
+                  </div>
+                <div class="product-info">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-md-6 col-sm-7 col-12">
+                            <div class="section-title">
+                                {% if section.settings.heading2 != blank %}<h2>{{ section.settings.heading2 }}</h2>{% endif %}
+                                {% if section.settings.content != blank %}<p>{{ section.settings.content }}</p>{% endif %}
+                                {% if section.settings.btn != blank %}
+                                  <a href="{{ section.settings.btn_link2 }}" class="btn"> {{ section.settings.btn2 }} {% render "category-circal" %}</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-5 col-12">
+                            <div class="img-wrapper ">
+                              {% if section.settings.image2 != blank %}<img src="{{ section.settings.image2 | img_url: 'master' }}" alt="grp-img">{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+{% schema %}
+{
+"name": "two-col-section",
+"tag": "section",
+"class": "card-slider-sec bg-style",
+    "settings":[
+      {
+        "type": "image_picker",
+        "id": "effect1",
+        "label": "t:settings_schema.Our-partners.settings.effect1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:settings_schema.Our-partners.settings.image"
+      },
+      {
+        "type": "image_picker",
+        "id": "effect2",
+        "label": "t:settings_schema.Our-partners.settings.effect2"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "t:settings_schema.Our-partners.settings.heading"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "t:settings_schema.Our-partners.settings.btn"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "t:settings_schema.Our-partners.settings.btn_link"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "t:settings_schema.Our-partners.settings.collection"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.product.settings.header.content"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "default": false,
+        "label": "t:settings_schema.product.settings.show_vendor"
+      },
+      {
+          "type": "checkbox",
+          "id": "display_product_type",
+          "label": "t:settings_schema.product.settings.display_product_type",
+          "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_rating",
+        "default": false,
+        "label": "t:settings_schema.product.settings.show_rating",
+        "info": "t:settings_schema.product.settings.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_secondary_image",
+        "default": false,
+        "label": "t:settings_schema.product.settings.show_secondary_image"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_variants",
+        "default": true,
+        "label": "t:settings_schema.product.settings.show_variants"
+      },
+      {
+        "type": "text",
+        "id": "pro_img_widthheight",
+        "default": "600x600",
+        "label": "t:settings_schema.product.settings.pro_img_widthheight"
+      },
+      {
+        "type": "header",
+        "content": "Produc-info-section"
+      },
+      {
+        "type": "text",
+        "id": "heading2",
+        "label": "t:settings_schema.Our-partners.settings.heading"
+      },
+      {
+        "type": "text",
+        "id": "content",
+        "label": "t:settings_schema.Our-partners.settings.content"
+      },
+      {
+        "type": "text",
+        "id": "btn2",
+        "label": "t:settings_schema.Our-partners.settings.btn"
+      },
+      {
+        "type": "url",
+        "id": "btn_link2",
+        "label": "t:settings_schema.Our-partners.settings.btn_link"
+      },
+      {
+        "type": "image_picker",
+        "id": "image2",
+        "label": "t:settings_schema.Our-partners.settings.image"
+      }
+  ],
+  "presets": [
+      {
+        "name": "two-col-section"
+      }
+    ]
+  }
+{% endschema %}
+
+        

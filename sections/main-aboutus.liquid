@@ -1,0 +1,202 @@
+    {% for block in section.blocks %}
+        {% case block.type %}
+           
+            {% when 'text-block' %}
+                <div class="about-us-page padding-bottom padding-top">
+                  <div class="container">
+                    <div class="section-title">
+                      {% if block.settings.title != blank %}
+                          <h2>{{ block.settings.title }}</h2>
+                      {% endif %}
+                    </div>
+                    <div class="row">
+                        {% if block.settings.textsub != blank %}
+                            <div class="col-md-6 col-12">
+                              <div class="about-us-content">
+                                {{ block.settings.textsub }}
+                              </div>
+                            </div>
+                        {% endif %}
+
+                        {% if block.settings.text != blank %}
+                            <div class="col-md-6 col-12">
+                              <div class="about-us-content">
+                                {{ block.settings.text }}
+                              </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                  </div>  
+                </div>
+
+            {% when 'image-with-text' %}
+                <div class="about-our-shop-section">
+                  <div class="container">
+                    <div class="section-title text-center">
+                      {% if block.settings.stitle != blank %}
+                          <h2>{{ block.settings.stitle }}</h2>
+                      {% endif %}
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-12">
+                          <div class="abt-shp-column-left">
+                            <div class="section-title">
+                            {% if block.settings.title2 != blank %}
+                                <h3>{{ block.settings.title2 }}</h3>
+                            {% endif %}
+                            </div>
+                            {% if block.settings.text2 != blank %}
+                                {{ block.settings.text2 }}
+                            {% endif %}
+                            {% if block.settings.pera2 != blank %}
+                                {{ block.settings.pera2 }}
+                            {% endif %}
+                          </div>
+                        </div> 
+                        <div class="col-md-6 col-12">
+                          <div class="abt-shp-column-right">
+                            {% if block.settings.image != blank %}
+                                <img loading="lazy" src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}">
+                            {% else %} 
+                                <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0607/9624/0064/files/about-us-section.png" alt="banner">
+                            {% endif %}
+                          </div>
+                        </div>
+                    </div>
+                  </div>  
+                </div>
+
+            {% when 'image-with-text2' %}
+                <div class="about-our-shop-section">
+                  <div class="container">
+                    <div class="row align-items-center row-reverse">
+                        <div class="col-md-6 col-12">
+                          <div class="abt-shp-column-left">
+                            <div class="section-title">
+                            {% if block.settings.title3 != blank %}
+                                <h3>{{ block.settings.title3 }}</h3>
+                            {% endif %}
+                            </div>
+                            {% if block.settings.text3 != blank %}
+                                {{ block.settings.text3 }}
+                            {% endif %}
+                            {% if block.settings.pera3 != blank %}
+                                {{ block.settings.pera3 }}
+                            {% endif %}
+                          </div>
+                        </div> 
+                        <div class="col-md-6 col-12">
+                          <div class="abt-shp-column-right">
+                            {% if block.settings.image2 != blank %}
+                                <img loading="lazy" src="{{ block.settings.image2 | image_url }}" alt="{{ block.settings.image2.alt }}">
+                            {% else %} 
+                                <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0607/9624/0064/files/about-us-section.png"alt="banner" width="655" height="485"/>
+                            {% endif %}
+                          </div>  
+                        </div>
+                    </div>
+                </div>
+             </div>    
+
+
+        {% endcase %}
+    {% endfor %}
+
+{% schema %}
+{
+    "name": "About us",
+    "max_blocks": 8,
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "subhd",
+            "label": "t:settings_schema.About-us.settings.subhd"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text-block",
+            "name": "Text block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "t:settings_schema.About-us.blocks.title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "textsub",
+                    "label": "t:settings_schema.About-us.blocks.textsub"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "t:settings_schema.About-us.blocks.text"
+                }
+            ]
+        },
+        {
+            "type": "image-with-text",
+            "name": "Image With Text",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "stitle",
+                    "label": "t:settings_schema.About-us.blocks.title"
+                },
+                {
+                    "type": "text",
+                    "id": "title2",
+                    "label": "t:settings_schema.About-us.blocks.title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text2",
+                    "label": "t:settings_schema.About-us.blocks.text1"
+                },
+                {
+                    "type": "richtext",
+                    "id": "pera2",
+                    "label": "t:settings_schema.About-us.blocks.text1"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "t:settings_schema.About-us.blocks.image"
+                }
+            ]
+        },
+        {
+            "type": "image-with-text2",
+            "name": "Image With Text2",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title3",
+                    "label": "t:settings_schema.About-us.blocks.title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text3",
+                    "label": "t:settings_schema.About-us.blocks.text1"
+                },
+                {
+                    "type": "richtext",
+                    "id": "pera3",
+                    "label": "t:settings_schema.About-us.blocks.text1"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image2",
+                    "label": "t:settings_schema.About-us.blocks.image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+    {
+      "name": "About us"
+    }
+  ]
+}
+{% endschema %}

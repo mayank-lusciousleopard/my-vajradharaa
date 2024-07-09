@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "content": "<p>Welcome to our Wishlist feature, where you can curate your personalized collection of desired items and experiences.<\/p>"
+      }
+    },
+    "wishlist": {
+      "type": "wishlist",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "wishlist"
+  ]
+}

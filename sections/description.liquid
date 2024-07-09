@@ -1,0 +1,50 @@
+            <div class="container" data-section="description">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-12">
+                        <div class="img-wrapper">
+                            {% if section.settings.image != blank %}<img src="{{ section.settings.image | img_url : 'master' }}">{% endif %}
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="section-title">
+                            {% if section.settings.title != blank %}<h2 class="h1">{{ section.settings.title }}</h2>{% endif %}
+                        </div>
+                        {% if section.settings.content != blank %}<p>{{ section.settings.content }}</p>{% endif %}
+                    </div>
+                </div>
+            </div>
+{% schema %}
+  {
+    "name": "product-description",
+    "tag": "section",
+    "class": "products padding-top",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id" : "image",
+          "label" : "t:settings_schema.Our-partners.settings.image"
+        },
+        {
+          "type": "text",
+          "id" : "title" ,
+          "label" : "t:settings_schema.Our-partners.settings.title"
+        },
+        {
+          "type": "text",
+          "id" : "content" ,
+          "label" : "t:settings_schema.Our-partners.settings.content"
+        }
+    ],
+    "presets":[
+      {
+        "name": "Product-description"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

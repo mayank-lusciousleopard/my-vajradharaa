@@ -1,0 +1,50 @@
+{%- paginate blog.articles by 6 -%}
+  <div class="container">
+    <div class="section-title">
+      <h1>{{ blog.title | escape }}</h1>
+    </div>
+    <div class="row blog-grid {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+      {%- for article in blog.articles -%}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 blog-widget">
+          {%- render 'article-card',
+            article: article,
+            show_date: section.settings.show_date
+          -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
+  </div>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "main-block",
+  "tag": "section",
+  "class": "padding-top",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-blog.header"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "default": true,
+      "label": "t:sections.main-blog.show_date"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-blog.paragraph"
+    }
+  ],
+    "presets": [
+    {
+      "name": "main-block"
+    }
+  ]
+}
+{% endschema %}

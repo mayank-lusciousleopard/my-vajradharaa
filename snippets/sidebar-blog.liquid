@@ -1,0 +1,50 @@
+{% if show_recent_articles %}
+<div class="articlerightbar blog-grid-section article-section-home">
+  <div class="section-title">
+    <h3>{{ 'blogs.sidebar.recent_articles' | t }}<span class="right"></span></h3>
+  </div>
+    {% for article in blogs[blog.handle].articles limit: 3 %}
+    <div class="blog-widget">
+      <div class="blog-card">
+      {% if article.image %}
+      <div class="blog-card-image">
+        {% assign image_alt = article.title | escape %}
+        {{ article | img_url: '368x' | img_tag: image_alt | link_to: article.url }}
+      </div>
+      {% endif %}
+      {% assign month = article.published_at | date: "%b" %}
+      {% assign day = article.published_at | date: "%d" %}
+      {% assign year = article.published_at | date: "%Y" %}
+      {% assign iso = article.published_at | date: "%F" %}
+      <div class="blog-card-content">
+        <span>{{ 'general.wishlist.article' | t }}</span>
+        <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>
+        <div class="article__meta">
+          <p>{{ article.content | strip_html }}</p>
+        </div>
+        <div class="blog-card-bottom">
+          <a href="{{ article.url }}" class="btn-secondary"> Read more </a>
+          <span class="article_date date"><i class="mdi mdi-calendar"></i> <time datetime="{{ iso }}">{{ month }} {{ day }}, {{ year }}</time></span>        
+        </div>  
+      </div>
+    </div>
+   </div>   
+    {% endfor %}
+</div>
+{% endif %}
+{% if show_blog_tags %}
+{% if blog.all_tags.size > 0 %}
+<div class="article_categories">
+  <h4>{{ 'blogs.sidebar.categories' | t }}</h4>
+  <ul>
+    {% for tag in blog.all_tags %}
+    {% if current_tags contains tag %}
+    <li>{{ tag }}</li>
+    {% else %}
+    <li>{{ tag | link_to_tag: tag }}</li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endif %}

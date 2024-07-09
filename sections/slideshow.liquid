@@ -1,0 +1,171 @@
+{% if section.settings.effect1 != blank %}<img src="{{ section.settings.effect1 | img_url: 'master' }}" class="desing-circle1" alt="desing-circle">{% endif %}
+{% if section.settings.effect2 != blank %}<img src="{{ section.settings.effect2 | img_url: 'master' }}" class="desing-circle2" alt="desing-circle2">{% endif %}
+<div class="home-main-slider">
+   {%- assign i = 1 -%} 
+  {% for block in section.blocks %}
+    <div class="home-slide slide{{ i }} slick-slide">
+      {% if block.settings.image != blank %}<img src="{{ block.settings.image | img_url: "master" }}" class="banner" alt="slider-image" />{% endif %}                 
+        <div class="container">
+          <div class="home-slider-wrapper">
+            <div class="home-main">
+              <div class='home-title section-title'>
+                {% if block.settings.heading != blank %}<h2>{{ block.settings.heading }}</h2>{% endif %}
+                {% if block.settings.content != blank %}<p>{{ block.settings.content }}</p>{% endif %}
+                {% if block.settings.btn1 != blank %}<a href="{{ block.settings.btn_link1 }}" class="home-btn btn">{{ block.settings.btn1 }} {% render "category-circal" %}</a>{% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ring1">
+          {% if block.settings.img1 != blank %}<img src="{{ block.settings.img1 | img_url: 'master' }}" alt="ring1">{% endif %}
+            <div class="ring-label">
+              <span>{{ block.settings.title }}</span>
+              <div>{{ block.settings.name }}</div>
+              <ins>{{ block.settings.price }}</ins>
+              <a href="{{ block.settings.btn_link }}">{{ block.settings.btn }}</a>
+            </div>                  
+        </div>
+        <div class="ring2">
+          {% if block.settings.img2 != blank %}<img src="{{ block.settings.img2 | img_url: 'master' }}" alt="ring2">{% endif %}
+          <div class="ring-label">
+            <span>{{ block.settings.title2 }}</span>
+              <div>{{ block.settings.name2 }}</div>
+              <ins>{{ block.settings.price2 }}</ins>
+              <a href="{{ block.settings.btn_link2 }}">{{ block.settings.btn2 }}</a>
+          </div>
+        </div>
+        {% if block.settings.img3 != blank %}<img src="{{ block.settings.img3 | img_url: 'master' }}" class="ring3" alt="ring3">{% endif %}
+    </div>
+  {% assign i = i | plus: 1 %}
+  {% endfor %}
+</div>
+<div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">  </div> 
+{% schema %}
+{
+  "name": "Slideshow",
+  "tag": "section",
+  "class": "main-home-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "effect1",
+      "label": "t:settings_schema.Our-partners.settings.effect1"
+    },
+    {
+      "type": "image_picker",
+      "id": "effect2",
+      "label": "t:settings_schema.Our-partners.settings.effect2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:settings_schema.Our-partners.blocks.heading"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "t:settings_schema.Our-partners.blocks.content"
+        },
+        {
+          "type": "text",
+          "id": "btn1",
+          "label": "t:settings_schema.Our-partners.blocks.btn"
+        },
+        {
+          "type": "url",
+          "id": "btn_link1",
+          "label": "t:settings_schema.Our-partners.blocks.btn_link"
+        },
+        {
+          "type": "header",
+          "content": "Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "img1",
+          "label": "t:settings_schema.Our-partners.blocks.img1"
+        },
+        {
+          "type": "image_picker",
+          "id": "img2",
+          "label": "t:settings_schema.Our-partners.blocks.img2"
+        },
+        {
+          "type": "image_picker",
+          "id": "img3",
+          "label": "t:settings_schema.Our-partners.blocks.img3"
+        },
+        {
+          "type": "header",
+          "content": "Product Image Button1"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:settings_schema.Our-partners.blocks.title"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "t:settings_schema.Our-partners.blocks.name"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "t:settings_schema.Our-partners.blocks.price"
+        },
+        {
+          "type": "text",
+          "id": "btn",
+          "label": "t:settings_schema.Our-partners.blocks.btn"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "t:settings_schema.Our-partners.blocks.btn_link"
+        },
+        {
+          "type": "header",
+          "content": "Product Image Button2"
+        },
+        {
+          "type": "text",
+          "id": "title2",
+          "label": "t:settings_schema.Our-partners.blocks.title"
+        },
+        {
+          "type": "text",
+          "id": "name2",
+          "label": "t:settings_schema.Our-partners.blocks.name"
+        },
+        {
+          "type": "text",
+          "id": "price2",
+          "label": "t:settings_schema.Our-partners.blocks.price"
+        },
+        {
+          "type": "text",
+          "id": "btn2",
+          "label": "t:settings_schema.Our-partners.blocks.btn"
+        },
+        {
+          "type": "url",
+          "id": "btn_link2",
+          "label": "t:settings_schema.Our-partners.blocks.btn_link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow"
+    }
+  ]
+}
+{% endschema %}

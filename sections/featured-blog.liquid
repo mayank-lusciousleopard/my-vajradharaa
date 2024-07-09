@@ -1,0 +1,124 @@
+<div class="container" data-section="featured-blog">
+  <div class="main-title">
+    {% if section.settings.heading != blank %}<h2>{{ section.settings.heading }}</h2>{% endif %}
+  </div>
+  {%- assign blog = blogs[section.settings.blog] -%}
+  {% unless blog.articles_count == 0 or blog.empty? %}
+  <div class="main-blog"> 
+    {% for article in blog.articles limit: section.settings.post_limit %}
+      <div id="blog-{{article.id}}" class="blog-card">   
+          <div class="blog-card-image">
+            <a href="{{ article.url }}">
+              {% if article.image %}
+                <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.image.alt | escape }}" class="default-img">
+                {% else %}
+                <img src="{{ 'no-image.gif' | img_url: 'master' }}"/>
+                {% endif %} 
+            </a>
+          </div>
+          <div class="blog-card-content">  
+            <div class="blog-card-top">
+              <span>{{ 'general.wishlist.article' | t }}</span>
+              <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>
+              <p>{% if article.excerpt.size > 0 %}{{ article.excerpt }}{% else %}{{ article.content | strip_html }}{% endif %}</p>
+            </div>  
+            <div class="blog-card-bottom">
+              <a href="{{ article.url }}" class="btn">Read more</a>
+              <span class="date">
+                <div class="article_date">
+                  <div class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">                    
+                    {{ article.published_at | time_tag: format: 'date' }}
+                  </div>
+                </div> 
+              </span>  
+            </div>  
+          </div>   
+        </div>     
+        {% endfor %}
+    </div>
+      {% else %}
+      <div class="grid grid--uniform grid--blog">
+        <div id="blog_slider" class="blog-right-column-inner">
+          {% for i in (1..section.settings.post_limit) %}
+          <div id="blog-{{article.id}}" class="blog-widget">               
+              <div class="blog-widget-inner">
+                <a href="{{ article.url }}" class="article__grid-image">
+                  <img src="{{ 'no-image.gif' | img_url: '380x240' }}"/>
+                </a>
+                <div class="blog-caption">   
+                  <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>
+                  <p>{% if article.excerpt.size > 0 %}{{ article.excerpt }}{% else %}{{ article.content | strip_html | truncate: 85 }}{% endif %}</p>
+                    <a href="{{ article.url }}" class="blog-btn"">
+                      <svg viewBox="0 0 10 5">
+                        <path d="M2.37755e-08 2.57132C-3.38931e-06 2.7911 0.178166 2.96928 0.397953 2.96928L8.17233 2.9694L7.23718 3.87785C7.07954 4.031 7.07589 4.28295 7.22903 4.44059C7.38218 4.59824 7.63413 4.60189 7.79177 4.44874L9.43039 2.85691C9.50753 2.78197 9.55105 2.679 9.55105 2.57146C9.55105 2.46392 9.50753 2.36095 9.43039 2.28602L7.79177 0.69418C7.63413 0.541034 7.38218 0.544682 7.22903 0.702329C7.07589 0.859976 7.07954 1.11192 7.23718 1.26507L8.1723 2.17349L0.397965 2.17336C0.178179 2.17336 3.46059e-06 2.35153 2.37755e-08 2.57132Z"></path>
+                      </svg>
+                    </a>
+                </div> 
+              </div>  
+          </div>  
+          {% endfor %}
+        </div>
+      </div>
+      {% endunless %}          
+      {% if section.settings.show_view_all %}
+      <div class="text-center">
+        <a href="{{ blog.url }}" class="btn">
+          {{ 'blogs.article.view_all' | t }}
+        </a>
+      </div>
+      {% endif %}
+</div>
+{% schema %}
+  {
+    "name": "Blog posts",
+    "tag": "section",
+    "class": "blog-sec padding-bottom",
+    "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:settings_schema.Our-partners.settings.heading"
+        },
+        {
+        "id": "blog",
+        "type": "blog",
+        "label": "t:settings_schema.Our-partners.settings.blog"
+        },
+        {
+        "type": "select",
+        "id": "post_limit",
+        "label": "t:settings_schema.Our-partners.settings.post_limit",
+        "default": "4",
+        "options": [
+        {
+        "value": "2",
+        "label": "2"
+        },
+        {
+        "value": "4",
+        "label": "4"
+        },
+        {
+        "value": "6",
+        "label": "6"
+        },
+        {
+        "value": "8",
+        "label": "8"
+        }
+      ]
+      },
+      {
+      "type": "checkbox",
+      "id": "blog_show_date",
+      "label": "t:settings_schema.Our-partners.settings.show_date",
+      "default": true
+      }
+    ],
+      "presets": [
+      {
+        "name": "Blog posts"
+      }
+    ]
+  }  
+{% endschema %}

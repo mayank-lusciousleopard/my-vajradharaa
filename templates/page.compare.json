@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "content": "<p>Welcome to our Compare feature, where you can curate your personalized collection of desired items and experiences.<\/p>"
+      }
+    },
+    "compare": {
+      "type": "compare",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "compare"
+  ]
+}

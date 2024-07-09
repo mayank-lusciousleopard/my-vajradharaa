@@ -1,0 +1,397 @@
+{
+  "sections": {
+    "166357255109ff5dc3": {
+      "type": "slideshow",
+      "blocks": {
+        "d649df61-ddf5-4269-a601-11a370e5b705": {
+          "type": "image",
+          "settings": {
+            "heading": "Diamond Jewelry & Bracelet",
+            "content": "Elevate your style with Vajradhara's exquisite collection of lab-grown diamond jewelry and bracelets. Meticulously crafted in 18-karat gold, each piece combines luxury with ethical responsibility, perfect for those who appreciate fine craftsmanship and sustainability. Whether you're drawn to timeless classics or modern designs, our bracelets offer versatility and elegance, ensuring you stand out on any occasion. Discover jewelry that embodies sophistication and ethical integrity, designed to complement your unique taste and values.",
+            "btn1": "Check more products",
+            "btn_link1": "shopify:\/\/collections\/bracelets",
+            "img1": "shopify:\/\/shop_images\/image_01_vd.png",
+            "img2": "shopify:\/\/shop_images\/image_02_vd.png",
+            "img3": "shopify:\/\/shop_images\/image_03_vd.png",
+            "title": "Bracelets",
+            "name": "Opulent Oval Tennis",
+            "price": "₹188,108",
+            "btn": "More",
+            "btn_link": "shopify:\/\/products\/opulent-oval-tennis-bracelet",
+            "title2": "Bracelets",
+            "name2": "Opulent Oval Tennis",
+            "price2": "₹188,108",
+            "btn2": "More",
+            "btn_link2": "shopify:\/\/products\/opulent-oval-tennis-bracelet"
+          }
+        },
+        "9f67f65f-4b1d-4bbd-946d-aa3e96958946": {
+          "type": "image",
+          "settings": {
+            "heading": "Diamond Jewelry & Pendant",
+            "content": "Indulge in sophistication with Vajradhara's stunning collection of lab-grown diamond jewelry and pendants. Each piece is crafted with precision and adorned in 18-karat gold, offering a luxurious yet ethical choice for the modern connoisseur. Whether you prefer classic elegance or contemporary flair, our designs promise to elevate every ensemble with brilliance and grace. Discover jewelry that reflects your values and enhances your style, meticulously created to be cherished for a lifetime",
+            "btn1": "Check more products",
+            "btn_link1": "shopify:\/\/collections\/pendants",
+            "img1": "shopify:\/\/shop_images\/image_01_vd_1.png",
+            "img2": "shopify:\/\/shop_images\/image_02_vd_2.png",
+            "img3": "shopify:\/\/shop_images\/image_03_vd_1.png",
+            "title": "Pendants",
+            "name": "Netted Heart",
+            "price": "₹27,985",
+            "btn": "More",
+            "btn_link": "shopify:\/\/products\/netted-heart-pendant",
+            "title2": "Pendants",
+            "name2": "Netted Heart",
+            "price2": "₹27,985",
+            "btn2": "More",
+            "btn_link2": "shopify:\/\/products\/netted-heart-pendant"
+          }
+        }
+      },
+      "block_order": [
+        "d649df61-ddf5-4269-a601-11a370e5b705",
+        "9f67f65f-4b1d-4bbd-946d-aa3e96958946"
+      ],
+      "settings": {
+        "effect1": "shopify:\/\/shop_images\/desing-circle.png",
+        "effect2": "shopify:\/\/shop_images\/desing-circle2.png"
+      }
+    },
+    "1662965100b1084b4f": {
+      "type": "category-feature",
+      "blocks": {
+        "259a253f-c3e2-4d19-8f56-e14c394c321b": {
+          "type": "text",
+          "settings": {
+            "image2": "shopify:\/\/shop_images\/139A3493_1200x1200_bbb200de-6df3-46b2-b49a-6780ce610b92.webp",
+            "heading1": "Bracelet",
+            "btn1": "Check more products",
+            "btn_link1": "shopify:\/\/collections\/bracelets"
+          }
+        },
+        "b8bcf1de-fe51-4292-ab50-23895a377688": {
+          "type": "text",
+          "settings": {
+            "image2": "shopify:\/\/shop_images\/blog-card3.png",
+            "heading1": "Pendants",
+            "btn1": "Check more products",
+            "btn_link1": "shopify:\/\/collections\/pendants"
+          }
+        }
+      },
+      "block_order": [
+        "259a253f-c3e2-4d19-8f56-e14c394c321b",
+        "b8bcf1de-fe51-4292-ab50-23895a377688"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-img1.png",
+        "heading": "Trending Now",
+        "btn": "Check more products",
+        "btn_link": "shopify:\/\/collections\/featured"
+      }
+    },
+    "d7978e0c-a8b3-4873-8c4e-cd6d944b45ce": {
+      "type": "home-services",
+      "blocks": {
+        "28935cdd-e638-42d8-987d-a974a0bfb846": {
+          "type": "Services",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hgift.png",
+            "title": "Finished products",
+            "description": "products and gift wrapping"
+          }
+        },
+        "10cda56a-056e-429c-bb82-9edd23d3bacf": {
+          "type": "Services",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hservice.png",
+            "title": "Large and frequent",
+            "description": "promotions with  discounts"
+          }
+        },
+        "1e50914d-7fb6-468a-8eb4-ee1429a023a1": {
+          "type": "Services",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hLine.png",
+            "title": "Free shipping",
+            "description": "on any order from $ 150"
+          }
+        }
+      },
+      "block_order": [
+        "28935cdd-e638-42d8-987d-a974a0bfb846",
+        "10cda56a-056e-429c-bb82-9edd23d3bacf",
+        "1e50914d-7fb6-468a-8eb4-ee1429a023a1"
+      ],
+      "settings": {
+      }
+    },
+    "d7ea8ac3-46c0-4d52-a6a4-2666daa02bf5": {
+      "type": "product-slider",
+      "settings": {
+        "heading": "Diamond Gifting Bracelets",
+        "content": "Celebrate special moments with Vajradhara's exquisite collection of lab-grown diamond gifting bracelets. Crafted in 18-karat gold, each piece blends luxury with ethical sourcing, making them perfect for meaningful gifts. Whether you're commemorating a milestone or expressing appreciation, our bracelets offer timeless elegance and superior craftsmanship.",
+        "btn": "Check more products",
+        "btn_link": "shopify:\/\/collections\/bracelets",
+        "collection": "bracelets",
+        "show_vendor": true,
+        "display_product_type": true,
+        "show_rating": false,
+        "show_secondary_image": true,
+        "show_variants": false,
+        "pro_img_widthheight": "600x600"
+      }
+    },
+    "13262589-cfb7-4247-89a0-7505e1c79b41": {
+      "type": "two-col-section",
+      "settings": {
+        "effect1": "shopify:\/\/shop_images\/top-main-desing.png",
+        "image": "shopify:\/\/shop_images\/dd.png",
+        "heading": "Find the perfect Pendant for you",
+        "btn": "Check more products",
+        "btn_link": "shopify:\/\/collections\/pendants",
+        "collection": "pendants",
+        "show_vendor": true,
+        "display_product_type": true,
+        "show_rating": false,
+        "show_secondary_image": true,
+        "show_variants": false,
+        "pro_img_widthheight": "600x600",
+        "heading2": "Best Diamond Jewelry for All Occasions",
+        "content": "Discover the epitome of elegance and versatility with Vajradhara's collection of lab-grown diamond jewelry. Perfect for every occasion, our meticulously crafted pieces in 18-karat gold exude sophistication and ethical integrity.",
+        "btn2": "Check more products",
+        "btn_link2": "shopify:\/\/collections\/all",
+        "image2": "shopify:\/\/shop_images\/img1.png"
+      }
+    },
+    "15bbcf4f-625a-4355-8ce2-a600c510b27f": {
+      "type": "vertical-product",
+      "settings": {
+        "heading": "Diamonds are forever",
+        "btn": "Check more products",
+        "btn_link": "shopify:\/\/collections\/bracelets",
+        "collection": "bracelets",
+        "show_vendor": true,
+        "display_product_type": true,
+        "show_rating": false,
+        "show_secondary_image": true,
+        "show_variants": false,
+        "pro_img_widthheight": "600x600"
+      }
+    },
+    "ba37f9f1-dc28-41b1-94e0-93651da2e7fc": {
+      "type": "best-seller",
+      "settings": {
+        "heading": "Discover the world of jewellery & diamonds",
+        "btn": "Go to categories",
+        "btn_link": "shopify:\/\/collections\/pendants",
+        "collection": "pendants",
+        "show_vendor": true,
+        "display_product_type": true,
+        "show_rating": false,
+        "show_secondary_image": true,
+        "show_variants": false,
+        "pro_img_widthheight": "600x600"
+      }
+    },
+    "3718894b-b52f-4da4-8aa2-14eba8464400": {
+      "type": "our-products",
+      "settings": {
+        "heading": "Unique Designs That Define Elegance",
+        "content": "At Vajradhara, we redefine luxury with our exclusive collection of unique designs in lab-grown diamond jewelry. Crafted in 18-karat gold, each piece is a masterpiece of innovation and sophistication, tailored for those who appreciate distinctive elegance.",
+        "btn": "Check more products",
+        "btn_link": "shopify:\/\/collections\/all",
+        "image": "shopify:\/\/shop_images\/Frame_1171278555_2.png",
+        "title": "Pendents",
+        "name": "Love-Express",
+        "price": "₹22,485.45",
+        "btn1": "More",
+        "btn_link1": "shopify:\/\/products\/love-express-pendent"
+      }
+    },
+    "1663225962c56380eb": {
+      "type": "our-partner",
+      "blocks": {
+        "c25d05d9-9834-4b2a-b215-afa5f434ce02": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-slider.webp",
+            "link": "#"
+          }
+        },
+        "logo_image_eFrHmL": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-slider.webp",
+            "link": "#"
+          }
+        },
+        "logo_image_DPPQCJ": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-slider.webp",
+            "link": "#"
+          }
+        },
+        "logo_image_BEKKkU": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-slider.webp",
+            "link": "#"
+          }
+        },
+        "logo_image_RcdJg3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-slider.webp",
+            "link": "#"
+          }
+        },
+        "logo_image_dkY8eA": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-slider.webp",
+            "link": "#"
+          }
+        },
+        "logo_image_X3D8yT": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-slider.webp",
+            "link": "#"
+          }
+        },
+        "logo_image_BEcxPM": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-slider.webp",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "c25d05d9-9834-4b2a-b215-afa5f434ce02",
+        "logo_image_eFrHmL",
+        "logo_image_DPPQCJ",
+        "logo_image_BEKKkU",
+        "logo_image_RcdJg3",
+        "logo_image_dkY8eA",
+        "logo_image_X3D8yT",
+        "logo_image_BEcxPM"
+      ],
+      "settings": {
+        "heading": "Partners"
+      }
+    },
+    "3e28463c-0817-473d-b15f-09afdfa661a8": {
+      "type": "best-collection",
+      "blocks": {
+        "5042ae05-23e0-46f4-8df0-681ce6641c1d": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DOC-P-8076-Model_fbbfc784-cf7d-4775-9466-745718a922a1.jpg",
+            "title": "CATEGORIES",
+            "heading": "Pendants",
+            "btn1": "Check more products",
+            "btn_link1": "shopify:\/\/collections\/pendants"
+          }
+        },
+        "35ee7966-6536-4983-b74b-3d901ed8b4a4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TB-25004_R1_b2815deb-fe1a-400d-838e-c116b837b2f5.jpg",
+            "title": "CATEGORIES",
+            "heading": "Bracelets",
+            "btn1": "Check more products",
+            "btn_link1": "shopify:\/\/collections\/bracelets"
+          }
+        }
+      },
+      "block_order": [
+        "5042ae05-23e0-46f4-8df0-681ce6641c1d",
+        "35ee7966-6536-4983-b74b-3d901ed8b4a4"
+      ],
+      "settings": {
+        "heading": "Diamonds Jewelry",
+        "content": "Explore the allure of diamond jewelry at Vajradhara, where each piece is a testament to elegance and ethical luxury. Our collection features lab-grown diamonds meticulously set in 18-karat gold, offering brilliance without compromise.",
+        "btn": "Check more products",
+        "btn_link": "shopify:\/\/collections\/all"
+      }
+    },
+    "1663217820c57ce33a": {
+      "type": "Testimonial",
+      "blocks": {
+        "f0ee3816-81fc-45c9-aef4-bfdfc130c6e5": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ring-slider2.png",
+            "img_link": "#",
+            "review_image": "shopify:\/\/shop_images\/ratings.png",
+            "rating": "4.5 \/ 5.0",
+            "title": "Excellent",
+            "description": "We had several questions and minor issues that we werent aware of how to fix it. Contacted support and they were super quick..",
+            "name": "Isabel Hanson,",
+            "client": "SEO Manger"
+          }
+        },
+        "e968bb58-b278-411d-93a6-329de7eb2da1": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ring-slider2.png",
+            "img_link": "#",
+            "review_image": "shopify:\/\/shop_images\/ratings.png",
+            "rating": "4.5 \/ 5.0",
+            "title": "Great Products",
+            "description": "Great theme with LOTS of options and GREAT support. Their support is awesome.  Great communication and service!.",
+            "name": "Ewan Sharpe,",
+            "client": "Developer"
+          }
+        },
+        "844ce548-6de8-4c4d-9667-a1e1303eae80": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ring-slider2.png",
+            "img_link": "#",
+            "review_image": "shopify:\/\/shop_images\/ratings.png",
+            "rating": "4.5 \/ 5.0",
+            "title": "Customer Support",
+            "description": "The customer support is absolutely amazing. Every time I submitted an question, Bigsteps was able to provide an answer very fast.",
+            "name": "John Doe,",
+            "client": "Client"
+          }
+        }
+      },
+      "block_order": [
+        "f0ee3816-81fc-45c9-aef4-bfdfc130c6e5",
+        "e968bb58-b278-411d-93a6-329de7eb2da1",
+        "844ce548-6de8-4c4d-9667-a1e1303eae80"
+      ],
+      "settings": {
+        "heading": "Testimonials"
+      }
+    },
+    "featured-blog": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "From our blog",
+        "blog": "news",
+        "post_limit": "6",
+        "blog_show_date": true
+      }
+    }
+  },
+  "order": [
+    "166357255109ff5dc3",
+    "1662965100b1084b4f",
+    "d7978e0c-a8b3-4873-8c4e-cd6d944b45ce",
+    "d7ea8ac3-46c0-4d52-a6a4-2666daa02bf5",
+    "13262589-cfb7-4247-89a0-7505e1c79b41",
+    "15bbcf4f-625a-4355-8ce2-a600c510b27f",
+    "ba37f9f1-dc28-41b1-94e0-93651da2e7fc",
+    "3718894b-b52f-4da4-8aa2-14eba8464400",
+    "1663225962c56380eb",
+    "3e28463c-0817-473d-b15f-09afdfa661a8",
+    "1663217820c57ce33a",
+    "featured-blog"
+  ]
+}

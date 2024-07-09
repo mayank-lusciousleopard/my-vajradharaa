@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "16644248689a0b4d5f": {
+      "type": "blog-page-banner",
+      "settings": {
+        "bgimage": "shopify:\/\/shop_images\/blog-banner.png"
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": true
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "content",
+        "share"
+      ],
+      "settings": {
+        "show_recent_articles": true,
+        "show_blog_tags": true
+      }
+    }
+  },
+  "order": [
+    "16644248689a0b4d5f",
+    "main"
+  ]
+}

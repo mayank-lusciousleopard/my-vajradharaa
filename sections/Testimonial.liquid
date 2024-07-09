@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="main-title">
+    {% if section.settings.heading != blank %}<h2>{{ section.settings.heading }}</h2>{% endif %}
+  </div>
+  <div class="testi-main">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        <div class="testi-slide">
+          <div class="product-card-image">
+            {% if block.settings.image != blank %}
+              <a href="{{ block.settings.img_link }}"><img src="{{ block.settings.image | img_url : 'master' }}"></a>
+            {% endif %}
+          </div>
+          <div class="testi-content">
+            <div class="title">
+              <h3>{{ block.settings.title }}</h3>
+                <div class="ratings d-flex align-items-center justify-content-end">
+                  {% if block.settings.review_image != blank %}<img src="{{ block.settings.review_image | img_url : 'master' }}">{% endif %}
+                  {% if block.settings.rating != blank %}<span>{{ block.settings.rating }}</span>{% endif %}
+                </div>
+            </div>
+            <p>{{ block.settings.description }}</p>
+            <h6>{{ block.settings.name }}{{ block.settings.client }}</p>
+          </div> 
+        </div>
+    {% endfor %}
+    {% endif %}
+    {% if section.blocks.size == 0 %}
+      {% include 'no-blocks' %}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+  "name": "Testimonial",
+  "tag": "section",
+  "class": "testimonials-sec padding-bottom",
+  "settings":[
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings_schema.Our-partners.settings.heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "testimonial",
+      "settings":[
+          {
+            "type": "header",
+            "content" : "Product-image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:settings_schema.Our-partners.blocks.image"
+          },
+          {
+            "type": "url",
+            "id": "img_link",
+            "label": "t:settings_schema.Our-partners.blocks.img_link"
+          },
+          {
+            "type": "header",
+            "content" : "Rating-image"
+          },
+          {
+            "type": "image_picker",
+            "id": "review_image",
+            "label": "t:settings_schema.Our-partners.blocks.image"
+          },
+          {
+            "type": "text",
+            "id": "rating",
+            "label": "t:settings_schema.Our-partners.blocks.rating"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "t:settings_schema.Our-partners.blocks.title"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "t:settings_schema.Our-partners.blocks.description"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "t:settings_schema.Our-partners.blocks.name"
+          },
+          {
+            "type": "text",
+            "id": "client",
+            "label": "t:settings_schema.Our-partners.blocks.client"
+          }
+       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial"
+    }
+  ]
+}
+{% endschema %}

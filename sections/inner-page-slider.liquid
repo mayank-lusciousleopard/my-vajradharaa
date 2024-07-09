@@ -1,0 +1,99 @@
+<div class="container" data-section="inner-page-slider">
+  <div class="card-slider-title sec-head d-flex justify-content-between align-items-center">
+    {% if section.settings.heading != blank %}<h2>{{ section.settings.heading }}</h2>{% endif %}
+    {% if section.settings.btn != blank %}
+      <a href="{{ section.settings.btn_link }}" class="btn"> {{ section.settings.btn }} {% render "category-circal" %}</a>
+    {% endif %}        
+  </div>  
+    <div class="grid__item card-slider-main">
+    {%- assign collection = collections[section.settings.collection]  -%}
+    {% for product in collection.products %}
+            <div class="card-slides">
+            {% render 'card-product', card_product: product, block_id: block.id, pro_img_widthheight: section.settings.pro_img_widthheight, show_secondary_image: section.settings.show_secondary_image,
+            show_vendor: section.settings.show_vendor, show_rating: section.settings.show_rating, show_variants: section.settings.show_variants, display_product_type: section.settings.display_product_type  %}
+            </div>
+    {% else %}
+      {%- for i in (1..6) -%}
+        <div class="best-sell-cat-item product-card">
+          {% render 'product-card-placeholder' %}
+        </div>
+      {%- endfor -%}
+    {% endfor %} 
+    </div>
+</div>  
+
+{% schema %}
+{
+"name": "inner-page-slider",
+"tag": "section",
+"class": "card-slider-sec product-list-card padding-top",
+    "settings":[
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "t:settings_schema.Our-partners.settings.heading"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "t:settings_schema.Our-partners.settings.btn"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "t:settings_schema.Our-partners.settings.btn_link"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "t:settings_schema.Our-partners.settings.collection"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.product.settings.header.content"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "default": false,
+        "label": "t:settings_schema.product.settings.show_vendor"
+      },
+      {
+          "type": "checkbox",
+          "id": "display_product_type",
+          "label": "t:settings_schema.product.settings.display_product_type",
+          "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_rating",
+        "default": false,
+        "label": "t:settings_schema.product.settings.show_rating",
+        "info": "t:settings_schema.product.settings.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_secondary_image",
+        "default": false,
+        "label": "t:settings_schema.product.settings.show_secondary_image"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_variants",
+        "default": true,
+        "label": "t:settings_schema.product.settings.show_variants"
+      },
+      {
+        "type": "text",
+        "id": "pro_img_widthheight",
+        "default": "600x600",
+        "label": "t:settings_schema.product.settings.pro_img_widthheight"
+      }
+  ],
+  "presets": [
+      {
+        "name": "inner-page-slider"
+      }
+    ]
+  }
+{% endschema %}

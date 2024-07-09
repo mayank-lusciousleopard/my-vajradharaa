@@ -1,0 +1,145 @@
+<section class="recentlyview view-product-sec padding-top padding-bottom" data-recent-handle="{{ product.handle }}">
+  <div class="container">
+      <div class="section-title">
+          <h2>Recently Viewed Products</h2>
+      </div>
+      <div class="recent-slider">
+      </div>
+  </div>
+</section>
+
+                        
+<script>
+$(document).ready(function () {
+  // Function to set a cookie
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+  }
+
+  var productHandle = $('.recentlyview').data('recent-handle');
+
+  // Function to get the array of product handles from the cookie
+  function getProductHandlesArray() {
+    var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)productHandles\s*=\s*([^;]*).*$)|^.*$/, "$1");
+    return cookieValue ? cookieValue.split('+') : [];
+  }
+
+  // Get the current array of product handles from the cookie
+  var currentProductHandlesArray = getProductHandlesArray();
+
+  if (currentProductHandlesArray.indexOf(productHandle) === -1) {
+    // Add the new product handle to the array
+    currentProductHandlesArray.push(productHandle);
+
+    // Limit the array to the last 5 product handles
+    if (currentProductHandlesArray.length > 6) {
+      currentProductHandlesArray = currentProductHandlesArray.slice(-6);
+    }
+
+    // Set the updated array in the cookie, joining with '+'
+    setCookie('productHandles', currentProductHandlesArray.join('+'), 30);
+  }
+
+  // Loop through each product handle in the array
+  currentProductHandlesArray.forEach(function (singleProductHandle) {
+    // Make an AJAX request for each product handle
+    $.ajax({
+      url: '/products/' + singleProductHandle,
+      dataType: 'html',
+      type: 'GET',
+      success: function (data) {
+        // Extract the price from the data
+        if (currentProductHandlesArray.length >= 2) {
+          $('.recentlyview').show();
+        } else {
+          $('.recentlyview').hide();
+        }
+
+        if ($('.recent-slider').hasClass('slick-initialized')) {
+          // Unslick the slider before re-initializing
+          $('.recent-slider').slick('unslick');
+        }
+
+        // Re-initialize the slider with your settings
+        {% if shop.locale == 'ar' or shop.locale == 'he' or shop.locale == 'ur' %}
+        $('.recent-slider').slick({
+          autoplay: false,
+          slidesToShow: 4,
+          speed: 1000,
+          slidesToScroll: 1,
+          prevArrow: '<button class="slide-arrow slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.7071 12.7071C22.8946 12.5196 23 12.2652 23 12C23 11.7348 22.8946 11.4804 22.7071 11.2929L11.7071 0.292894C11.3166 -0.0976306 10.6834 -0.0976306 10.2929 0.292894C9.90237 0.683418 9.90237 1.31658 10.2929 1.70711L20.5858 12L10.2929 22.2929C9.90237 22.6834 9.90237 23.3166 10.2929 23.7071C10.6834 24.0976 11.3166 24.0976 11.7071 23.7071L22.7071 12.7071ZM13.7071 12.7071C13.8946 12.5196 14 12.2652 14 12C14 11.7348 13.8946 11.4804 13.7071 11.2929L2.70711 0.292894C2.31658 -0.0976302 1.68342 -0.0976302 1.29289 0.292894C0.902369 0.683419 0.902369 1.31658 1.29289 1.70711L11.5858 12L1.29289 22.2929C0.90237 22.6834 0.90237 23.3166 1.29289 23.7071C1.68342 24.0976 2.31658 24.0976 2.70711 23.7071L13.7071 12.7071Z" fill="#fff"/></svg></button>',
+    nextArrow: '<button class="slide-arrow slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.7071 12.7071C22.8946 12.5196 23 12.2652 23 12C23 11.7348 22.8946 11.4804 22.7071 11.2929L11.7071 0.292894C11.3166 -0.0976306 10.6834 -0.0976306 10.2929 0.292894C9.90237 0.683418 9.90237 1.31658 10.2929 1.70711L20.5858 12L10.2929 22.2929C9.90237 22.6834 9.90237 23.3166 10.2929 23.7071C10.6834 24.0976 11.3166 24.0976 11.7071 23.7071L22.7071 12.7071ZM13.7071 12.7071C13.8946 12.5196 14 12.2652 14 12C14 11.7348 13.8946 11.4804 13.7071 11.2929L2.70711 0.292894C2.31658 -0.0976302 1.68342 -0.0976302 1.29289 0.292894C0.902369 0.683419 0.902369 1.31658 1.29289 1.70711L11.5858 12L1.29289 22.2929C0.90237 22.6834 0.90237 23.3166 1.29289 23.7071C1.68342 24.0976 2.31658 24.0976 2.70711 23.7071L13.7071 12.7071Z" fill="#fff"/></svg></button>',
+          dots: false,
+          buttons: false,
+          rtl:true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+          ]
+        });
+        {% else %}
+          $('.recent-slider').slick({
+          autoplay: false,
+          slidesToShow: 4,
+          speed: 1000,
+          slidesToScroll: 1,
+          prevArrow: '<button class="slide-arrow slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.7071 12.7071C22.8946 12.5196 23 12.2652 23 12C23 11.7348 22.8946 11.4804 22.7071 11.2929L11.7071 0.292894C11.3166 -0.0976306 10.6834 -0.0976306 10.2929 0.292894C9.90237 0.683418 9.90237 1.31658 10.2929 1.70711L20.5858 12L10.2929 22.2929C9.90237 22.6834 9.90237 23.3166 10.2929 23.7071C10.6834 24.0976 11.3166 24.0976 11.7071 23.7071L22.7071 12.7071ZM13.7071 12.7071C13.8946 12.5196 14 12.2652 14 12C14 11.7348 13.8946 11.4804 13.7071 11.2929L2.70711 0.292894C2.31658 -0.0976302 1.68342 -0.0976302 1.29289 0.292894C0.902369 0.683419 0.902369 1.31658 1.29289 1.70711L11.5858 12L1.29289 22.2929C0.90237 22.6834 0.90237 23.3166 1.29289 23.7071C1.68342 24.0976 2.31658 24.0976 2.70711 23.7071L13.7071 12.7071Z" fill="#fff"/></svg></button>',
+    nextArrow: '<button class="slide-arrow slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.7071 12.7071C22.8946 12.5196 23 12.2652 23 12C23 11.7348 22.8946 11.4804 22.7071 11.2929L11.7071 0.292894C11.3166 -0.0976306 10.6834 -0.0976306 10.2929 0.292894C9.90237 0.683418 9.90237 1.31658 10.2929 1.70711L20.5858 12L10.2929 22.2929C9.90237 22.6834 9.90237 23.3166 10.2929 23.7071C10.6834 24.0976 11.3166 24.0976 11.7071 23.7071L22.7071 12.7071ZM13.7071 12.7071C13.8946 12.5196 14 12.2652 14 12C14 11.7348 13.8946 11.4804 13.7071 11.2929L2.70711 0.292894C2.31658 -0.0976302 1.68342 -0.0976302 1.29289 0.292894C0.902369 0.683419 0.902369 1.31658 1.29289 1.70711L11.5858 12L1.29289 22.2929C0.90237 22.6834 0.90237 23.3166 1.29289 23.7071C1.68342 24.0976 2.31658 24.0976 2.70711 23.7071L13.7071 12.7071Z" fill="#fff"/></svg></button>',
+          dots: false,
+          buttons: false,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+          ]
+        });
+        {% endif %}
+        var handletitle = $(data).find('.pro-right-side .product__title').text();
+        var handleimg = $(data).find('media-gallery .product-main-item .product-item-img img').attr('src');
+        var handleprice = $(data).find('.pro-right-side .price').html();
+
+        // Update the content of the corresponding .recent-slider element
+        if (productHandle != singleProductHandle) {
+          $('.recent-slider').slick('slickAdd', `
+            <div class='card product-card'>
+                <div class='card-top'>
+                <h4 class='product-title'><a href="/products/${singleProductHandle}" tabindex='0'>${handletitle}</a></h4>
+                </div>
+                <div class='product-card-image product-img'>
+                  <div class='card__media'>
+                    <a href='/products/${singleProductHandle}' class=''>
+                      <img src='${handleimg}' alt='product-img' loading='lazy'>
+                    </a>
+                  </div>
+                </div>
+                <div class='product-content-bottom text-center'>
+                  <div class='price'>${handleprice}</div>
+                </div>
+            </div>
+          `);
+        }
+      },
+      error: function (data) {
+        console.log('ajax error');
+      }
+    });
+  });
+});
+
+</script>
+

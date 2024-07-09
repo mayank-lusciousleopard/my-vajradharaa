@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-search",
+      "settings": {
+        "show_vendor": true,
+        "display_product_type": true,
+        "show_rating": false,
+        "show_secondary_image": true,
+        "show_variants": true,
+        "pro_img_widthheight": "270x246"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
